@@ -1,6 +1,42 @@
 Run time analysis (Worst Case O notation) for each task
-Task0: O(1)
-Task1: O(n)
-Task2: O(n)
-Task3: partA : O(n + n log n), partB : O(n)
-Task4: O(n + n log n)
+Task0:
+There is no loop, O(0n)
+Only 4 lines of code, O(4)
+Hence, it is O(4) in time complexity.
+The overall worst-case notation of this code is O(1).
+
+Task1:
+There are 2 loops, each loop has 2 lines of code, O(2*2*n) => O(4n)
+2 single lines of code, O(2)
+Since, O(4n) > O(2) in time complexity.
+The overall worst-case notation of this code is O(n).
+
+Task2:
+There is one loop, that run 2 lines of code in each iteration, O(2n)
+One max operation, O(n)
+3 single lines of code, O(3)
+Hence, the big O notation is: O(2n+n+3) = O(3n+3)
+The overall worst-case notation of this code is O(n).
+
+Task3:
+PartA,
+One single loop, O(n)
+One sort operation, O(n log n)
+3 single lines of code, O(3)
+The big O notation is: O (n log n + n + 3)
+Since O(nlogn) > O(n) > O(1) in time complexity.
+The overall worst-case notation of this code is O(n log n).
+
+PartB,
+One single loop, O(n)
+3 single liens of code, O(3)
+The big O notation is: O ( n + 3)
+Since  O(n) > O(1) in time complexity.
+The overall worst-case notation of this code is O(n).
+
+Task4:
+Four loop, O(4n)
+One sort method, O(n log n)
+7 single lines of code, O(7)
+Since O(n log n) > O(n) > O(1) in time complexity.
+The overall worst-case notation of this code is O(n log n).

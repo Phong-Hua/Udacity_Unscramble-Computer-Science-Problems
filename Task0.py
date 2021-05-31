@@ -26,9 +26,9 @@ def task0(textList, callList):
     "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
     """
     text_incoming_number, text_answering_number, text_time = textList[0]
-    print("First record of texts, {} texts {} at time {}".format(text_incoming_number, text_answering_number, text_time))
+    print(f"First record of texts, {text_incoming_number} texts {text_answering_number} at time {text_time}")
 
     call_incoming_number, call_answering_number, call_time, call_duration = callList[len(calls)-1]
-    print("Last record of calls, {} calls {} at time {}, lasting {} seconds".format(call_incoming_number, call_answering_number, call_time, call_duration))
+    print(f"Last record of calls, {call_incoming_number} calls {call_answering_number} at time {call_time}, lasting {call_duration} seconds")
 
 task0(texts, calls);

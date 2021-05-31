@@ -75,8 +75,9 @@ def partA(callList: list):
     incoming_area_mobile_list.sort()
     return incoming_area_mobile_list
 
-
-print(partA(calls));
+print("The numbers called by people in Bangalore have codes:")
+for number in partA(calls):
+  print(number)
 
 def partB(callList: list):
   """Find percentage of calls from fixed lines in Bangalore are made to fixed lines also in Bangalore

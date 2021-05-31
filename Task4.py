@@ -40,6 +40,7 @@ def task4(textList: list, callList: list):
     make_call_set = set()
     receive_call_set = set()
     telemarketers_set = set()
+
     for text in textList:
         send_text_set.add(text[0])
         receive_text_set.add(text[1])
@@ -47,15 +48,17 @@ def task4(textList: list, callList: list):
         make_call_set.add(call[0])
         receive_call_set.add(call[1])
     for number in make_call_set:
-        if (number not in send_text_set) or (number not in receive_text_set) or (number not in receive_call_set):
+        if (number not in send_text_set) and (number not in receive_text_set) and (number not in receive_call_set):
             telemarketers_set.add(number);
+            
     telemarketers_list = list(telemarketers_set)
     telemarketers_list.sort()
     return telemarketers_list;
 
 def print_task4(textList: list, callList: list):
-    print("These numbers could be telemarketers: ")
-    for number in task4(textList, callList):
+    print(f"These numbers could be telemarketers:")
+    telemarketers_number = task4(textList, callList);
+    for number in telemarketers_number:
         print(number)
 
 print_task4(texts, calls);

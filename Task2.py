@@ -30,12 +30,8 @@ def task2(callList: list):
         time_dict[call[0]] = time_dict.get(call[0], 0) + int(call[3])
         time_dict[call[1]] = time_dict.get(call[1], 0) + int(call[3])
 
-    max_duration = 0;
-    telephone_number = None;
-    for number, duration in time_dict.items():
-        if (duration > max_duration):
-            max_duration = duration;
-            telephone_number = number;
+    telephone_number = max(time_dict, key = lambda k: time_dict.get(k));
+    max_duration = time_dict.get(telephone_number);
 
     print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(telephone_number, max_duration))
 
